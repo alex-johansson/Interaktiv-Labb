@@ -19,7 +19,7 @@ var PreparationView = function(container, model){
 			var htmlIngredients = '';
 			for(k in dishToView.ingredients){
 				htmlIngredients += '<br>' 
-				+ dishToView.ingredients[k].quantity 
+				+ dishToView.ingredients[k].quantity * model.getNumberOfGuests()
 				+ ' ' 
 				+ dishToView.ingredients[k].unit 
 				+ ' ' 
