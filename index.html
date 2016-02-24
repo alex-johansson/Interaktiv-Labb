@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homelette</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+  </head>
+  <body>
+  <style>
+  body {
+  	background-image: url("http://static1.squarespace.com/static/519b1da1e4b005a0d6f42dc8/t/5334f793e4b01041ee379161/1395980325588/WholePantry_Website_web.jpg?format=1500w");
+  }
+  
+    #header {
+
+
+    background-color:black;
+    opacity: 0.75;
+    color:white;
+    font-family: "Century gothic", century, sans-serif;
+    text-align:left;
+    width: 100%;
+    padding: 10px;
+  }
+  	#firstview {
+    position: fixed;
+    top: 240px;
+    background-color:black;
+    opacity: 0.75;
+    text-align:left;
+    color:white;
+    font-family: "Century gothic", century, sans-serif;
+    padding:10px; 
+    width: 30%;
+
+}
+    #myDinnerView {
+    line-height:30px;
+    opacity: 0.65;
+    color:white; 
+    font-family: "Century gothic", century, sans-serif;
+    background-color:black;
+    height:82%;
+
+    width:25%;
+    float:left;
+    padding:2%; 
+    }
+    #selecteddish{
+    float:right;
+    color:white;
+    width:70%;
+    padding:15px;
+}
+
+    #left-column{
+    float: left;
+    color:white;
+    width:50%;
+    padding:3px;
+    }
+    #dishButton{
+    opacity: 0.65;
+    float:left;
+    padding:5px;
+    }
+    #dishesview{
+    float:left;
+    padding:5px; 
+    }
+    #middle-column{
+    color:white;
+    }
+    #right-column{
+    float: right;
+    color:white;
+    width:23%;
+    
+    }
+    #vitruta {
+    line-height:30px;
+    background-color:white; opacity: 0.75; 
+    color:black;
+    font-family: "Century gothic", century, sans-serif;
+    width:75%;
+    float:right;
+    padding:15px; 
+    height: 5%;   
+    }
+    #imagetext{
+    float:left;
+    width:50%;
+}
+    #ingred {
+    float:left;
+    background-color:black;
+    opacity: 0.75;
+    color:white;
+    font-family: "Century gothic", century, sans-serif;   
+    width:50%;
+    padding:10px;    
+}
+	  #goback {     
+    line-height:30px;
+    background-color:white; opacity: 0.75;
+    color:black;
+    font-family: "Century gothic", century, sans-serif;
+    width:75%;
+    float:right;
+    padding:15px;    
+}
+    #menuView {
+    color: white;
+    }
+
+</style>
+
+<div class="row">
+    <div class="col-sm-12 ">
+    	<div id="header">
+      	<h1>Homelette</h1><h5>From the best chefs in the world directly in your kitchen</h5>
+    	</div>
+    </div>
+</div>
+
+<!--Block with text and button -->
+<div class="row">
+  <div class="col-sm-3 col-md-offset-0.5">
+    <div id="firstview">
+  	    <h2>A Home Dinner Service</h2>
+  	    <p>
+  	    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+  	    </p>
+  	    </br>
+  	    </br>
+  	    <p>
+  	    Start quickly
+  	    </p>
+  	    <button id="createDinner" class="btn btn-default" value="Create new dinner">Create Dinner</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="myDinnerView">
+  <div id="nav">
+    <div class="row">
+      <h1>My Dinner</h1><br>     
+      <div class="col-sm-8">
+        <p>People</p>
+        <div id="numberOfGuests"><input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10"></div>
+        <br>
+      </div>
+      <div class="col-sm-4 ">
+            <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+            <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+            <br><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <p>Dishname</p>
+        <div id="dishname"></p>
+        </div>
+        <button id="createDinner" class="btn btn-default" value="Confirm dinner">Confirm Dinner</button>
+	     </div>
+	      
+  	  <div class="col-sm-4 ">    
+        <p>Cost</p><span id="cost"></span><span id="totalMenuPrice"></span></p>
+        <br>
+	    </div>
+    </div>
+  </div>
+</div>
+  
+	<div id="thirdview">
+	    <div id="vitruta">
+	      <h2>Select Dish</h2>
+	      <!-- search for -->
+	      <div class="input-group">
+	        <input id="searchvalue" type="text" class="form-control" placeholder="Enter key words">
+	        <span class="input-group-btn">
+	          <button id="search" class="btn btn-default" type="button">Search</button>
+	        </span>
+
+
+	        <!-- main dessert starter -->
+	        <div class="col-xs-5">
+	          <select id="coursebutton" class="form-control">
+	            <option data-type="starter" selected>Starter</option>
+	            <option data-type="main dish" selected>Main</option>
+	            <option data-type="dessert" selected>Dessert</option>
+	          </select>
+	        </div>
+        </div>
+	     </div>
+	  	<div id="dishesview"></div> 
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="selecteddish">
+  <div id="imagetext">
+  	<span id="dishImage"></span>
+    <p><span id="dishDescription"></span></p>
+    <button id="backButton" class="btn btn-default" type="button" float:right;>Back to select dish</button>
+  </div>
+  <div id="ingred">
+    <h2>Ingredients for <span id="numberOfGuests"></span> people</h2>
+    <p><div id="ingredients" style="display:all;"></div></p>
+	  	<p>SEK     <span id="totalPrice"></span>  </p>
+	    </br>
+	    </br>
+    <input id="confirmdish" class="btn btn-default" type="button" value="Confirm Dish">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <div id ="menuOverviewView">
+		<div id="goback">
+	    <h3>
+        My dinner 4 people
+        <button id="gobackbutton" class="btn btn-default" type="button" style="float: right;" >Go back and edit dinner</button>
+        <button id="finishButton" class="btn btn-default" type="button" style="float: right;">View Preparation</button>
+      </h3>
+	  	</div>
+	  	<span id="menuView"><span>
+	 </div>
+  </div>
+
+  <div id="preparationView">
+    <span id="prep"></span>
+  </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/createdinnerview.js"></script>
+	<script src="js/controler/createdinnercontroler.js"></script>
+	<script src="js/view/myDinnerView.js"></script>
+	<script src="js/controler/mydinnercontroler.js"></script>
+	<script src="js/view/dishesView.js"></script>
+	<script src="js/controler/dishescontroler.js"></script>
+  <script src="js/view/selectedDishView.js"></script>
+  <script src="js/controler/selectedDishController.js"></script>
+  <script src="js/view/menuOverviewView.js"></script>
+  <script src="js/controler/menuOverviewController.js"></script>
+  <script src="js/view/preparationView.js"></script>
+
+	<!--<script src="js/view/exampleViewController.js"></script>-->
+  </body>
+</html>

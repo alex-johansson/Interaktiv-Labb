@@ -1,0 +1,13 @@
+alla knappar måste ha unikt id
+
+button.set/getAttribute
+
+set attribut id för varje knapp i for-loop
+
+
+
+set id på knapparna (gjort)
+i controller, kom på nåt sätt att skilja på knapparna
+
+en funktion: get button's id och kalla på dishToView med det (gör till Number!!!)
+this.getAttribute() ska vara samma som view.button
