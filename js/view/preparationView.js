@@ -27,16 +27,20 @@ var PreparationView = function(container, model){
 				+ '</br>';
 			}
 
-			html += '<div id="left-column">' + 
-      		'<img src="images/' + dishToView.image + '">' +
-          	'</div>' +
-    		'<div id="left-column">' +
-      		'<h2>' + dishToView.name + '</h2>' +
+			html += '<div id="ingredients">'+'<div class="row">' + 
+			'<div class="col-sm-3"> ' +
+			'<h2>' + dishToView.name + '</h2>' + '<div id="bild">'+
+      		'<img src="images/' + dishToView.image + '">' + '</div>' +
+      		'</div>' +
+      		'<div class="col-sm-4">' + 
+  			'<h2>Ingredients</h2>' +
       		htmlIngredients + 
           	'</div>' +  
-    		'<div id="right-column">' +
+    		'<div class="col-sm-5">' +
       		'<h2>Preparation</h2>' +
       		dishToView.description +
+    		'</div>'+
+    		'</div>' +
     		'</div>';
 
 /*
