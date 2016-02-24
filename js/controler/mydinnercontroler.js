@@ -11,7 +11,6 @@ var Mydinnercontroler = function(view, model){
 	});
 
 	view.createDinnerButton.click(function(){
-		console.log(model.getFullMenu());
 		$("#selecteddish").hide();
 		$("#menuOverviewView").show();
 		$("#selectdishes").hide();
