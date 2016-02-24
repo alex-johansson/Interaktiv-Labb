@@ -1,15 +1,26 @@
 var MenuOverviewController = function (view, model){
-	view.finishButton.click(function(){
-		$("#menuOverviewView").hide();
-		$("#preparationView").show();
-	});
+	function viewThis(){
 
-	view.gobackbutton.click(function(){
-		$("#firstview").hide();
-		$("#myDinnerView").show();
-		$("#thirdview").show();
- 		$("#dishesView").show();
- 		$("#menuOverviewView").hide();
-	});
+		view.finishButton.click(function(){
+			$("#menuOverviewView").hide();
+			$("#preparationView").show();
+		});
+
+		view.gobackbutton.click(function(){
+			$("#firstview").hide();
+			$("#myDinnerView").show();
+			$("#thirdview").show();
+ 			$("#dishesView").show();
+ 			$("#preparationView").hide();
+	 		$("#menuOverviewView").hide();
+		});
+	}
+
+	this.update = function(){
+		viewThis();
+	}
+
+	model.addObserver(this);
+	viewThis();
 
 }

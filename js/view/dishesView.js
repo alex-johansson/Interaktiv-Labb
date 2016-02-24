@@ -4,11 +4,12 @@ var DishesView = function (container, model) {
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
 	this.coursebutton = container.find("#coursebutton");
-	var buttonArray = this.buttonArray = [3];
-	var dishesIDs = this.dishesIDs = [];
+	//var buttonArray = this.buttonArray = [3];
+	//var dishesIDs = this.dishesIDs = [];
 
 	function viewThis(searchstring){
 		var course = container.find("#coursebutton").find(":selected").data("type");
+		console.log(course);
 		var dishes = this.dishes = [];
 		if(!(searchstring =="")){
 			dishes = model.getAllDishes(course, searchstring);
