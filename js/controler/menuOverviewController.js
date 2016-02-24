@@ -10,7 +10,7 @@ var MenuOverviewController = function (view, model){
 			$("#firstview").hide();
 			$("#myDinnerView").show();
 			$("#thirdview").show();
- 			$("#dishesView").show();
+ 			$("#dishesview").show();
  			$("#preparationView").hide();
 	 		$("#menuOverviewView").hide();
 		});

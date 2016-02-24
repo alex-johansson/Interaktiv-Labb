@@ -4,6 +4,7 @@ var DishesView = function (container, model) {
 	var dishesshow = this.dishesshow = container.find("#dishesview");
 	var searchstring ="";
 	this.coursebutton = container.find("#coursebutton");
+	//var buttonArray = this.buttonArray = [3];
 
 	function viewThis(searchstring){
 		var course = container.find("#coursebutton").find(":selected").data("type");

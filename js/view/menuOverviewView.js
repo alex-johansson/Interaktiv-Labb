@@ -1,7 +1,7 @@
 var MenuOverviewView = function (container, model) {
 	var finishButton = this.finishButton = container.find("#finishButton");
 	var menuView = this.menuView = container.find("#menuView");
-	this.gobackbutton= container.find("#gobackbutton")
+	this.gobackbutton = container.find("#gobackbutton");
 
 	//$("#preparationView").hide();
 	//$("#exampleView").hide();
